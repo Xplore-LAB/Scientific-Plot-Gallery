@@ -1,0 +1,20 @@
+id: D11
+name: Attention Map
+name_cn: 注意力热力图
+category: D          # machine-learning
+category_name: D 机器学习
+description: 注意力权重可视化
+use_cases: [注意力权重可视化]
+method: sns.heatmap()
+geometry: heat
+variant: attn
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 行列标签需可读；注明 head / layer 与掩码规则
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

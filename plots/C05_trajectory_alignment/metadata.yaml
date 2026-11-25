@@ -1,0 +1,20 @@
+id: C05
+name: Trajectory Alignment
+name_cn: 轨迹对齐图
+category: C          # time-series-dynamics
+category_name: C 时序动态
+description: 不同操作过程比较
+use_cases: [不同操作过程比较]
+method: ax.plot()
+geometry: traj
+variant: null
+priority: - P0
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 说明对齐基准（事件 / 相位 / DTW）
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

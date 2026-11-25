@@ -1,0 +1,20 @@
+id: C08
+name: Spectrum Plot
+name_cn: 频谱图
+category: C          # time-series-dynamics
+category_name: C 时序动态
+description: 周期性、振荡分析
+use_cases: [周期性、振荡分析]
+method: scipy.signal
+geometry: spectrum
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 注明窗函数、采样率与幅值单位
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

@@ -1,0 +1,20 @@
+id: F04
+name: Contour Plot
+name_cn: 等高线图
+category: F          # spatial-optimization
+category_name: F 空间优化
+description: 参数空间、损失函数
+use_cases: [参数空间、损失函数]
+method: ax.contour()
+geometry: contour
+variant: line
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 标注等高线数值；线型区分正负或高低
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

@@ -1,0 +1,20 @@
+id: E03
+name: Tree Diagram
+name_cn: 树状结构图
+category: E          # relationship-structure
+category_name: E 关系结构
+description: 本体结构、故障树
+use_cases: [本体结构、故障树]
+method: Graphviz
+geometry: network
+variant: tree
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 层级间距一致；叶节点标签对齐
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

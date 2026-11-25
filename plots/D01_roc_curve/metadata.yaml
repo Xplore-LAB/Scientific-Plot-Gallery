@@ -1,0 +1,20 @@
+id: D01
+name: ROC Curve
+name_cn: ROC 曲线
+category: D          # machine-learning
+category_name: D 机器学习
+description: 分类能力评价
+use_cases: [分类能力评价]
+method: sklearn.metrics.RocCurveDisplay
+geometry: roc
+variant: roc
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 标注 AUC 与随机基线；多模型置同一坐标系
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

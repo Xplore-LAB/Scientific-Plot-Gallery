@@ -1,0 +1,20 @@
+id: F02
+name: 3D Surface
+name_cn: 三维曲面图
+category: F          # spatial-optimization
+category_name: F 空间优化
+description: 响应面、目标函数
+use_cases: [响应面、目标函数]
+method: ax.plot_surface()
+geometry: surface
+variant: solid
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 注明视角、色阶与 z 轴单位；避免遮挡关键区域
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

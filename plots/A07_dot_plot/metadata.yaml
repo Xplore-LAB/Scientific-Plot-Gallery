@@ -1,0 +1,20 @@
+id: A07
+name: Dot Plot
+name_cn: 点图
+category: A          # basic-comparison
+category_name: A 基础对比
+description: 多方法精确数值对比
+use_cases: [多方法精确数值对比]
+method: ax.scatter()
+geometry: dotplot
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 按数值排序；与误差棒图例区分清楚
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

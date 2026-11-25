@@ -1,0 +1,20 @@
+id: B09
+name: Quantile-Quantile Plot
+name_cn: Q-Q 图
+category: B          # distribution-statistics
+category_name: B 分布统计
+description: 分布假设检验
+use_cases: [分布假设检验]
+method: scipy.stats.probplot()
+geometry: qq
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 参考线为 y=x；尾部偏离需单独讨论
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

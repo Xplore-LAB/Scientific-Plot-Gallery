@@ -1,0 +1,20 @@
+id: D12
+name: Calibration Curve
+name_cn: 校准曲线
+category: D          # machine-learning
+category_name: D 机器学习
+description: 预测概率可靠性
+use_cases: [预测概率可靠性]
+method: CalibrationDisplay
+geometry: roc
+variant: cal
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 注明分箱数与 Brier score；画完美校准对角线
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/Xplore-LAB/Scientific-Plot-Gallery/main/catalog.schema.json",
+  "title": "Scientific Plot Gallery Catalog",
+  "type": "object",
+  "required": [
+    "name",
+    "version",
+    "total_plots",
+    "categories",
+    "plots"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "total_plots": {
+      "type": "integer"
+    },
+    "category_count": {
+      "type": "integer"
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "plot_count",
+          "plot_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-F]$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "directory": {
+            "type": "string"
+          },
+          "plot_count": {
+            "type": "integer"
+          },
+          "plot_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "plots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "name_cn",
+          "category",
+          "description",
+          "method",
+          "directory",
+          "script"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-F][0-9]{2}$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "name_cn": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ]
+          },
+          "category_name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string"
+          },
+          "geometry": {
+            "type": "string"
+          },
+          "variant": {
+            "type": "string"
+          },
+          "priority": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "P0",
+              "P1",
+              null
+            ]
+          },
+          "limitations": {
+            "type": "string"
+          },
+          "directory": {
+            "type": "string"
+          },
+          "script": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "preview": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

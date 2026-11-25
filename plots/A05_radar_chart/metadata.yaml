@@ -1,0 +1,20 @@
+id: A05
+name: Radar Chart
+name_cn: 雷达图
+category: A          # basic-comparison
+category_name: A 基础对比
+description: 多维性能比较
+use_cases: [多维性能比较]
+method: 自定义多边形坐标
+geometry: radar
+variant: null
+priority: - P0
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 指标需统一方向与尺度；推荐 4–8 维；面积易误导
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

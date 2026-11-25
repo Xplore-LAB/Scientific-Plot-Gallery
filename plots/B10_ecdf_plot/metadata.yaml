@@ -1,0 +1,20 @@
+id: B10
+name: ECDF Plot
+name_cn: 累积分布图
+category: B          # distribution-statistics
+category_name: B 分布统计
+description: 分位数及性能分布比较
+use_cases: [分位数及性能分布比较]
+method: sns.ecdfplot()
+geometry: ecdf
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 阶梯步长随样本量变化，勿做平滑处理
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

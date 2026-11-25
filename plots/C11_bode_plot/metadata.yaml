@@ -1,0 +1,20 @@
+id: C11
+name: Bode Plot
+name_cn: Bode 图
+category: C          # time-series-dynamics
+category_name: C 时序动态
+description: 频域响应分析
+use_cases: [频域响应分析]
+method: python-control
+geometry: bode
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 幅频与相频共用对数频率轴，标出穿越频率
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

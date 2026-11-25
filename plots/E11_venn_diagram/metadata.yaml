@@ -1,0 +1,20 @@
+id: E11
+name: Venn Diagram
+name_cn: 维恩图
+category: E          # relationship-structure
+category_name: E 关系结构
+description: 少量集合的交集
+use_cases: [少量集合的交集]
+method: matplotlib-venn
+geometry: venn
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 仅适用 ≤3 个集合；面积尽量与集合大小成比例
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

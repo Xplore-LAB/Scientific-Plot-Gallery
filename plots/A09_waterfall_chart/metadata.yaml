@@ -1,0 +1,20 @@
+id: A09
+name: Waterfall Chart
+name_cn: 瀑布图
+category: A          # basic-comparison
+category_name: A 基础对比
+description: 性能增益分解
+use_cases: [性能增益分解]
+method: ax.bar()
+geometry: waterfall
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 正负增量配色需保持语义一致，并标注累积终点
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

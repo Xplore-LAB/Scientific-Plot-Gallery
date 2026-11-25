@@ -1,0 +1,20 @@
+id: D08
+name: Ablation Study
+name_cn: 消融实验图
+category: D          # machine-learning
+category_name: D 机器学习
+description: 模型组件贡献比较
+use_cases: [模型组件贡献比较]
+method: ax.bar()
+geometry: hbar
+variant: ablation
+priority: - P1
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 与完整模型作差；注明指标方向（越大/越小越好）
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

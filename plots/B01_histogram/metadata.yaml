@@ -1,0 +1,20 @@
+id: B01
+name: Histogram
+name_cn: 直方图
+category: B          # distribution-statistics
+category_name: B 分布统计
+description: 数据频率分布
+use_cases: [数据频率分布]
+method: ax.hist()
+geometry: hist
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 说明 bin 宽度；与 KDE 叠加时先归一化
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

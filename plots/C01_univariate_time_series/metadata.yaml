@@ -1,0 +1,20 @@
+id: C01
+name: Univariate Time Series
+name_cn: 单变量时序图
+category: C          # time-series-dynamics
+category_name: C 时序动态
+description: 过程变量变化
+use_cases: [过程变量变化]
+method: ax.plot()
+geometry: ts
+variant: single
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 标注采样间隔、单位与时间戳基准
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

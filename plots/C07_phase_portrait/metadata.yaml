@@ -1,0 +1,20 @@
+id: C07
+name: Phase Portrait
+name_cn: 相平面图
+category: C          # time-series-dynamics
+category_name: C 时序动态
+description: 系统状态演化
+use_cases: [系统状态演化]
+method: ax.plot()
+geometry: phase
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 标注平衡点、演化方向与初始条件
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

@@ -1,0 +1,20 @@
+id: E05
+name: Flowchart
+name_cn: 算法流程图
+category: E          # relationship-structure
+category_name: E 关系结构
+description: 方法执行流程
+use_cases: [方法执行流程]
+method: TikZ / Graphviz
+geometry: network
+variant: flow
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 判定节点用菱形；起点、终点与循环分支明确
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

@@ -1,0 +1,20 @@
+id: D02
+name: Precision-Recall Curve
+name_cn: PR 曲线
+category: D          # machine-learning
+category_name: D 机器学习
+description: 不平衡分类评价
+use_cases: [不平衡分类评价]
+method: PrecisionRecallDisplay
+geometry: roc
+variant: pr
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 随机基线为阳性率而非 0；注明 AP
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

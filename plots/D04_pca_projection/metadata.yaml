@@ -1,0 +1,20 @@
+id: D04
+name: PCA Projection
+name_cn: PCA 投影图
+category: D          # machine-learning
+category_name: D 机器学习
+description: 线性降维
+use_cases: [线性降维]
+method: sklearn.decomposition.PCA
+geometry: scatter
+variant: pca
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 坐标轴标注解释方差比；必要时画置信椭圆
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

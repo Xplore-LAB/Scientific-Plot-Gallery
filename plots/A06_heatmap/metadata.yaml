@@ -1,0 +1,20 @@
+id: A06
+name: Heatmap
+name_cn: 热力图
+category: A          # basic-comparison
+category_name: A 基础对比
+description: 实验矩阵、相关性
+use_cases: [实验矩阵、相关性]
+method: sns.heatmap()
+geometry: heat
+variant: matrix
+priority: - P0
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 连续色阶需感知均匀；务必带 colorbar 与行列标签
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

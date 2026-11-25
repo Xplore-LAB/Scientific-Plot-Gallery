@@ -1,0 +1,20 @@
+id: F01
+name: 3D Scatter Plot
+name_cn: 三维散点图
+category: F          # spatial-optimization
+category_name: F 空间优化
+description: 三维特征分布
+use_cases: [三维特征分布]
+method: mplot3d.scatter()
+geometry: scatter
+variant: 3d
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 注明视角与坐标轴；必要时补二维投影
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

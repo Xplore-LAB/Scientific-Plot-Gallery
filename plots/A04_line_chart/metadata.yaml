@@ -1,0 +1,20 @@
+id: A04
+name: Line Chart
+name_cn: 折线图
+category: A          # basic-comparison
+category_name: A 基础对比
+description: 参数变化、训练过程
+use_cases: [参数变化、训练过程]
+method: ax.plot()
+geometry: line
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 线宽 1.2–1.8 pt；多系列配合标记与线型区分
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

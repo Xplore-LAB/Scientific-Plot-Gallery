@@ -1,0 +1,20 @@
+id: D06
+name: UMAP Plot
+name_cn: UMAP 图
+category: D          # machine-learning
+category_name: D 机器学习
+description: 高维表征可视化
+use_cases: [高维表征可视化]
+method: umap-learn
+geometry: scatter
+variant: umap
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 注明 n_neighbors / min_dist；勿过度解读簇间距（与 D05 合并计作 P1 的 t-SNE / UMAP 一项）
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

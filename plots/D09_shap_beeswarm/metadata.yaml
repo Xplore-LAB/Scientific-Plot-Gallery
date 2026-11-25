@@ -1,0 +1,20 @@
+id: D09
+name: SHAP Beeswarm
+name_cn: SHAP 蜂群图
+category: D          # machine-learning
+category_name: D 机器学习
+description: 特征贡献及其分布
+use_cases: [特征贡献及其分布]
+method: shap.plots.beeswarm()
+geometry: swarm
+variant: shap
+priority: - P1
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 特征值高低应使用连续色阶，不要用分类色板
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

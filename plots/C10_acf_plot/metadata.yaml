@@ -1,0 +1,20 @@
+id: C10
+name: ACF Plot
+name_cn: 自相关图
+category: C          # time-series-dynamics
+category_name: C 时序动态
+description: 时间依赖性
+use_cases: [时间依赖性]
+method: statsmodels
+geometry: acf
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 画出置信区间并注明最大滞后阶数
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

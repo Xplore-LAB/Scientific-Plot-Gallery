@@ -1,0 +1,20 @@
+id: E09
+name: Chord Diagram
+name_cn: 弦图
+category: E          # relationship-structure
+category_name: E 关系结构
+description: 多实体之间的关联
+use_cases: [多实体之间的关联]
+method: HoloViews
+geometry: chord
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 连线设透明度避免遮挡；注明流量方向
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

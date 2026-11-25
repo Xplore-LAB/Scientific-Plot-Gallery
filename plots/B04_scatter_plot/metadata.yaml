@@ -1,0 +1,20 @@
+id: B04
+name: Scatter Plot
+name_cn: 散点图
+category: B          # distribution-statistics
+category_name: B 分布统计
+description: 变量关联与样本分布
+use_cases: [变量关联与样本分布]
+method: ax.scatter()
+geometry: scatter
+variant: plain
+priority: - P1
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 点需透明或抖动避免遮挡；注明回归/拟合方法
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

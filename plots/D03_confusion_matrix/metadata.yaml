@@ -1,0 +1,20 @@
+id: D03
+name: Confusion Matrix
+name_cn: 混淆矩阵
+category: D          # machine-learning
+category_name: D 机器学习
+description: 分类错误分析
+use_cases: [分类错误分析]
+method: ConfusionMatrixDisplay
+geometry: heat
+variant: cm
+priority: - P1
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 归一化需注明按行 / 按列；格子内标数值
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

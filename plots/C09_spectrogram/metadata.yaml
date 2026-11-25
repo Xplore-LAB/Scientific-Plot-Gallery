@@ -1,0 +1,20 @@
+id: C09
+name: Spectrogram
+name_cn: 时频谱图
+category: C          # time-series-dynamics
+category_name: C 时序动态
+description: 非平稳信号分析
+use_cases: [非平稳信号分析]
+method: scipy.signal.ShortTimeFFT
+geometry: heat
+variant: spectro
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 注明窗长、重叠率与频率分辨率
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

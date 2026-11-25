@@ -1,0 +1,20 @@
+id: D10
+name: SHAP Waterfall
+name_cn: SHAP 瀑布图
+category: D          # machine-learning
+category_name: D 机器学习
+description: 单样本决策解释
+use_cases: [单样本决策解释]
+method: shap.plots.waterfall()
+geometry: waterfall
+variant: shap
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 标出基准值与最终输出；注明样本编号
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

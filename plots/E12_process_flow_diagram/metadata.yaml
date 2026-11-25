@@ -1,0 +1,20 @@
+id: E12
+name: Process Flow Diagram
+name_cn: 工艺流程图
+category: E          # relationship-structure
+category_name: E 关系结构
+description: 工业过程与装置机理
+use_cases: [工业过程与装置机理]
+method: Draw.io / Visio / CAD
+geometry: network
+variant: pid
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 遵循 ISA 符号标准；标出设备位号与物流方向
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

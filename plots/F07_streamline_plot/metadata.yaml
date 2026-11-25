@@ -1,0 +1,20 @@
+id: F07
+name: Streamline Plot
+name_cn: 流线图
+category: F          # spatial-optimization
+category_name: F 空间优化
+description: 流体流动、状态场
+use_cases: [流体流动、状态场]
+method: ax.streamplot()
+geometry: stream
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 注明起点密度与积分方向；避免流线过密
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

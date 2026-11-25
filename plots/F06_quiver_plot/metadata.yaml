@@ -1,0 +1,20 @@
+id: F06
+name: Quiver Plot
+name_cn: 矢量场图
+category: F          # spatial-optimization
+category_name: F 空间优化
+description: 动态系统方向场
+use_cases: [动态系统方向场]
+method: ax.quiver()
+geometry: quiver
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 箭头长度需归一化并给参考尺度
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

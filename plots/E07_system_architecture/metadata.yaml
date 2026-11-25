@@ -1,0 +1,20 @@
+id: E07
+name: System Architecture
+name_cn: 系统架构图
+category: E          # relationship-structure
+category_name: E 关系结构
+description: 软件、智能体系统
+use_cases: [软件、智能体系统]
+method: Draw.io
+geometry: network
+variant: arch
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 模块边界与数据流方向需标注；配色区分层次
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

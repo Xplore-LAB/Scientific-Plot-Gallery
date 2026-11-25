@@ -1,0 +1,20 @@
+id: D13
+name: Critical Difference Diagram
+name_cn: 临界差异图
+category: D          # machine-learning
+category_name: D 机器学习
+description: 多算法统计比较
+use_cases: [多算法统计比较]
+method: CD Diagram
+geometry: cd
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 注明检验方法、显著性水平与平均秩
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

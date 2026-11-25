@@ -1,0 +1,20 @@
+id: B03
+name: Violin Plot
+name_cn: 小提琴图
+category: B          # distribution-statistics
+category_name: B 分布统计
+description: 多组数据的概率密度
+use_cases: [多组数据的概率密度]
+method: sns.violinplot()
+geometry: violin
+variant: null
+priority: - P1
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 各组带宽一致；小样本慎用
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

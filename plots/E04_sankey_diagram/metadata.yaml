@@ -1,0 +1,20 @@
+id: E04
+name: Sankey Diagram
+name_cn: 桑基图
+category: E          # relationship-structure
+category_name: E 关系结构
+description: 状态转移、物料能量流
+use_cases: [状态转移、物料能量流]
+method: Plotly
+geometry: sankey
+variant: null
+priority: - P1
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 流宽与量成正比并注明单位；守恒关系需核对
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

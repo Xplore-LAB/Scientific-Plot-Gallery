@@ -1,0 +1,20 @@
+id: C04
+name: Step Response
+name_cn: 阶跃响应图
+category: C          # time-series-dynamics
+category_name: C 时序动态
+description: 控制系统动态性能
+use_cases: [控制系统动态性能]
+method: python-control
+geometry: step
+variant: null
+priority: - P0
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 标出超调量、调节时间与稳态误差；含 DCS 阶梯设定值场景
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

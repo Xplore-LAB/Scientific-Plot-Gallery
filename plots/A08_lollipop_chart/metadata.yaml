@@ -1,0 +1,20 @@
+id: A08
+name: Lollipop Chart
+name_cn: 棒棒糖图
+category: A          # basic-comparison
+category_name: A 基础对比
+description: 排名、性能差异
+use_cases: [排名、性能差异]
+method: ax.stem()
+geometry: lollipop
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 细杆不宜过淡；端点大小保持一致
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

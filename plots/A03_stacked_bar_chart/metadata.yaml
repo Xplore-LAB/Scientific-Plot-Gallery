@@ -1,0 +1,20 @@
+id: A03
+name: Stacked Bar Chart
+name_cn: 堆叠柱状图
+category: A          # basic-comparison
+category_name: A 基础对比
+description: 组成比例、消耗构成
+use_cases: [组成比例、消耗构成]
+method: ax.bar(bottom=...)
+geometry: stackBar
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 段数不宜超过 6；小段需直接标注数值
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

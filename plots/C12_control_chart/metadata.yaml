@@ -1,0 +1,20 @@
+id: C12
+name: Control Chart
+name_cn: 控制图
+category: C          # time-series-dynamics
+category_name: C 时序动态
+description: 过程异常监测
+use_cases: [过程异常监测]
+method: matplotlib
+geometry: control
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 标出 UCL / LCL / CL 与所用判异准则
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

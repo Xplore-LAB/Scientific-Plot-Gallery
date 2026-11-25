@@ -1,0 +1,20 @@
+id: B07
+name: Raincloud Plot
+name_cn: 雨云图
+category: B          # distribution-statistics
+category_name: B 分布统计
+description: 原始样本、密度和统计量
+use_cases: [原始样本、密度和统计量]
+method: ptitprince
+geometry: raincloud
+variant: null
+priority: - P1
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 半小提琴、散点与箱线需对齐同一横轴
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

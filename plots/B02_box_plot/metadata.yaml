@@ -1,0 +1,20 @@
+id: B02
+name: Box Plot
+name_cn: 箱线图
+category: B          # distribution-statistics
+category_name: B 分布统计
+description: 中位数、四分位距、异常值
+use_cases: [中位数、四分位距、异常值]
+method: sns.boxplot()
+geometry: box
+variant: null
+priority: - P0
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 注明须线定义与异常点判定规则
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

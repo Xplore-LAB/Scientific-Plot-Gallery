@@ -1,0 +1,20 @@
+id: D14
+name: Pareto Frontier
+name_cn: Pareto 前沿图
+category: D          # machine-learning
+category_name: D 机器学习
+description: 多目标优化、性能权衡
+use_cases: [多目标优化、性能权衡]
+method: ax.scatter()
+geometry: pareto
+variant: null
+priority: - P1
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 坐标轴注明优化方向；标出非支配解
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

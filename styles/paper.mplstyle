@@ -1,0 +1,41 @@
+# Figure
+figure.figsize: 3.54, 2.65
+figure.dpi: 150
+figure.facecolor: white
+
+# Font
+font.family: sans-serif
+font.sans-serif: Arial, DejaVu Sans
+font.size: 8
+
+# Axes
+axes.labelsize: 8
+axes.titlesize: 9
+axes.linewidth: 0.8
+axes.spines.top: False
+axes.spines.right: False
+
+# Ticks
+xtick.labelsize: 7
+ytick.labelsize: 7
+xtick.direction: in
+ytick.direction: in
+xtick.major.width: 0.6
+ytick.major.width: 0.6
+
+# Line
+lines.linewidth: 1.5
+lines.markersize: 4
+
+# Legend
+legend.fontsize: 7
+legend.frameon: False
+
+# Export
+savefig.dpi: 600
+savefig.bbox: tight
+savefig.pad_inches: 0.03
+
+pdf.fonttype: 42
+ps.fonttype: 42
+svg.fonttype: none

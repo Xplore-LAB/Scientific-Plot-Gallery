@@ -1,0 +1,20 @@
+id: E02
+name: DAG
+name_cn: 有向无环图
+category: E          # relationship-structure
+category_name: E 关系结构
+description: 因果关系、依赖关系
+use_cases: [因果关系、依赖关系]
+method: Graphviz
+geometry: network
+variant: dag
+priority: - P1
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 箭头方向一致；层次布局避免交叉
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

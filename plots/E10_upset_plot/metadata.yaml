@@ -1,0 +1,20 @@
+id: E10
+name: UpSet Plot
+name_cn: UpSet 图
+category: E          # relationship-structure
+category_name: E 关系结构
+description: 多集合交集关系
+use_cases: [多集合交集关系]
+method: UpSetPlot
+geometry: upset
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 按交集大小排序；集合规模用独立条形标注
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

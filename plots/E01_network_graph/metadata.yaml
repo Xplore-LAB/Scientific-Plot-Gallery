@@ -1,0 +1,20 @@
+id: E01
+name: Network Graph
+name_cn: 网络关系图
+category: E          # relationship-structure
+category_name: E 关系结构
+description: 知识图谱、变量关联
+use_cases: [知识图谱、变量关联]
+method: NetworkX / Graphviz
+geometry: network
+variant: undirected
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 节点大小与颜色需有图例；避免边交叉遮挡
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例

@@ -1,0 +1,20 @@
+id: A01
+name: Bar Chart
+name_cn: 柱状图
+category: A          # basic-comparison
+category_name: A 基础对比
+description: 模型性能比较
+use_cases: [模型性能比较]
+method: ax.bar()
+geometry: barOne
+variant: null
+priority: []
+input: { format: csv, structure: group_x_y_label, file: example.csv }
+implementation: { language: python, libraries: [numpy, matplotlib, cycler], script: plot.py }
+output: [figure.pdf, figure.png]
+preview: preview.png
+limitations:
+  - 基线统一从 0 起；柱宽与组间距保持一致
+references:
+  - https://matplotlib.org/stable/plot_types/
+data_note: 模拟数据，非真实论文案例
